@@ -1,10 +1,13 @@
 import React, { useRef, useLayoutEffect, useMemo } from "react";
 import classNames from "classnames";
 import { gsap } from "gsap";
+import { useNavigate } from "react-router-dom";
 
 import styles from "./styles.module.scss";
 
 const Home: React.FC = () => {
+  const navigate = useNavigate();
+
   const app = useRef<HTMLDivElement>(null);
   const tl = useRef<GSAPTimeline>();
 
@@ -26,8 +29,11 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <div ref={app} className={styles.wrapper}>
-      <div className={styles.content}>
+    <div className={styles.wrapper}>
+      <div className={styles.buttonWrapper}>
+        <button onClick={() => navigate("/test")}>to Extra</button>
+      </div>
+      <div ref={app} className={styles.content}>
         <button
           onClick={onClickText}
           className={classNames(styles.button, "text1")}

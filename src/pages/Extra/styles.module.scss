@@ -1,0 +1,11 @@
+.wrapper {
+  @apply flex h-screen w-screen flex-col;
+
+  .buttonWrapper {
+    @apply p-12 text-24 font-semibold bg-blue-200;
+  }
+
+  .content {
+    @apply flex-1 flex justify-center items-center bg-gray-200;
+  }
+}

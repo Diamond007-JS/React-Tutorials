@@ -1,8 +1,12 @@
 .wrapper {
-  @apply h-screen w-screen flex justify-center items-center;
+  @apply h-screen w-screen flex flex-col;
+
+  .buttonWrapper {
+    @apply bg-blue-200 text-24 font-semibold p-12;
+  }
 
   .content {
-    @apply space-y-20 max-w-500 text-center;
+    @apply flex-1 flex justify-center items-center flex-col;
 
     .button {
       @apply text-36 font-medium;
