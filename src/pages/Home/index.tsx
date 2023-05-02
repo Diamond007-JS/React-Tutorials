@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useMemo } from "react";
+import React, { useRef, useLayoutEffect, useMemo } from "react";
 import classNames from "classnames";
 import { gsap } from "gsap";
 
@@ -14,7 +14,7 @@ const Home: React.FC = () => {
     gsap.to(e.target, { scale: 2, yoyo: true, repeat: 1 });
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       tl.current = gsap
         .timeline()
@@ -30,13 +30,14 @@ const Home: React.FC = () => {
       <div className={styles.content}>
         <button
           onClick={onClickText}
-          className={classNames(styles.title, "text1")}
+          className={classNames(styles.button, "text1")}
           style={{ color: `#${randomColor}` }}
         >
           React1
         </button>
         <p className={classNames(styles.title, "text2")}>React2</p>
         <p className={classNames(styles.title, "text3")}>React3</p>
+        <button className={classNames(styles.title, "text4")}>Click Here</button>
       </div>
     </div>
   );

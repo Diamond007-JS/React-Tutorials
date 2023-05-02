@@ -2,10 +2,14 @@
   @apply h-screen w-screen flex justify-center items-center;
 
   .content {
-    @apply space-y-20;
+    @apply space-y-20 max-w-500 text-center;
+
+    .button {
+      @apply text-36 font-medium;
+    }
 
     .title {
-      @apply text-32 font-medium;
+      @apply text-32 text-blue-500 font-medium;
     }
   }
 }
