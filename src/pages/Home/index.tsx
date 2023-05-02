@@ -25,7 +25,11 @@ const Home: React.FC = () => {
         .from(".text3", { x: -200, duration: 2 })
         .to(".text3", { x: 200, duration: 2 });
 
-      gsap.from(".text4", { duration: 1, scale: 4 });
+      gsap.fromTo(
+        ".text4",
+        { duration: 2, x: -200, repeat: 1 },
+        { duration: 2, x: 200, repeat: 1 }
+      );
     }, app);
 
     return () => ctx.revert();
