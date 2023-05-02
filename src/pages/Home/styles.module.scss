@@ -6,7 +6,7 @@
   }
 
   .content {
-    @apply flex-1 flex justify-center items-center flex-col;
+    @apply flex-1 flex justify-center items-center flex-col space-y-20;
 
     .button {
       @apply text-36 font-medium;

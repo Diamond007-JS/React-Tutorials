@@ -22,7 +22,10 @@ const Home: React.FC = () => {
       tl.current = gsap
         .timeline()
         .to(".text2", { rotate: 360, duration: 2 })
-        .to(".text3", { x: 200 });
+        .from(".text3", { x: -200, duration: 2 })
+        .to(".text3", { x: 200, duration: 2 });
+
+      gsap.from(".text4", { duration: 1, scale: 4 });
     }, app);
 
     return () => ctx.revert();
