@@ -1,8 +1,7 @@
 import React from "react";
-import Home from "./page/Home";
 
-function App() {
-  return <Home />;
-}
+import MainRouter from "./Router";
+
+const App: React.FC = () => <MainRouter />;
 
 export default App;

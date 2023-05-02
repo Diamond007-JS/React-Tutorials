@@ -1,0 +1,11 @@
+.wrapper {
+  @apply h-screen w-screen flex justify-center items-center;
+
+  .content {
+    @apply space-y-20;
+
+    .title {
+      @apply text-32 font-medium;
+    }
+  }
+}
