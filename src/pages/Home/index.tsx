@@ -16,6 +16,9 @@ const Home: React.FC = () => {
   const onClickText = (e: any) => {
     gsap.to(e.target, { scale: 2, yoyo: true, repeat: 1 });
   };
+  const toggleTimeline = () => {
+    tl.current?.reversed(!tl.current.reversed());
+  };
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -27,8 +30,8 @@ const Home: React.FC = () => {
 
       gsap.fromTo(
         ".text4",
-        { duration: 2, x: -200, repeat: 1 },
-        { duration: 2, x: 200, repeat: 1 }
+        { duration: 2, x: -200, repeat: 1, stagger: 1 },
+        { duration: 2, x: 200, repeat: 1, stagger: 1 }
       );
     }, app);
 
@@ -50,7 +53,10 @@ const Home: React.FC = () => {
         </button>
         <p className={classNames(styles.title, "text2")}>React2</p>
         <p className={classNames(styles.title, "text3")}>React3</p>
-        <button className={classNames(styles.title, "text4")}>Click Here</button>
+        <p className={classNames(styles.title, "text4")}>React3</p>
+        <button onClick={toggleTimeline} className={classNames(styles.title, "text5")}>
+          Click Here
+        </button>
       </div>
     </div>
   );
