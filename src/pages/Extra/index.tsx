@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Controls, PlayState, Tween } from "react-gsap";
 
 import styles from "./styles.module.scss";
 
