@@ -1,18 +1,22 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
-import Home from "../pages/Home";
-import TestPage from "../pages/Extra";
+import GsapPage from "../pages/Gsap";
+import PixiPage from "../pages/Pixi";
+import ReactHookForm from "../pages/React-hook-form";
+import Navbar from "../layout/Navbar";
 
 const MainRouter: React.FC = () => {
   return (
-    <Router>
+    <div>
+      <Navbar />
       <Routes>
-        <Route path='/home' element={<Home />} />
-        <Route path='/test' element={<TestPage />} />
-        <Route path='/*' element={<Navigate to='/home' replace={true} />} />
+        <Route path='gsap' element={<GsapPage />} />
+        <Route path='form' element={<ReactHookForm />} />
+        <Route path='extra' element={<PixiPage />} />
+        <Route path='/*' element={<Navigate to='form' replace={true} />} />
       </Routes>
-    </Router>
+    </div>
   );
 };
 

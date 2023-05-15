@@ -1,0 +1,11 @@
+.wrapper {
+  @apply py-50 px-100;
+
+  .inputWrapper {
+    @apply flex flex-col pb-20 pt-5;
+
+    .input {
+      @apply text-16 p-5 appearance-none border rounded-md  focus:outline-none focus:border-gray-600 focus:ring-gray-600 border-gray-300;
+    }
+  }
+}
